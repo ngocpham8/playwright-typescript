@@ -4,7 +4,7 @@ const MIN_BMI_OVERWEIGHT = 25;
 const MAX_BMI_OVERWEIGHT = 29.9;
 const MIN_BMI_OBESITY = 30;
 
-let weight = 74.7;
+let weight = 90;
 let height = 1.5;
 let bmi = (weight / (height * 2)).toFixed(1);
 
@@ -17,12 +17,14 @@ if (bmi < MIN_BMI_NORMALWEIGHT) {
 } else if (bmi <= MAX_BMI_NORMALWEIGHT) {
     console.log('Your BMI:', bmi, 'Normal weight.');
 }
-else if (bmi <= MAX_BMI_OVERWEIGHT) {
-    console.log('Your BMI:', bmi, 'Overweight');
-    console.log('You should descrease:', (weight - maxWeightOfNormalBMI).toFixed(1), 'kg. Max weight to get normal BMI is', maxWeightOfNormalBMI);
-}
 else {
-    console.log('Your BMI:', bmi, 'Obesity');
+    if (bmi <= MAX_BMI_OVERWEIGHT) {
+        console.log('Your BMI:', bmi, 'Overweight');
+    }
+    else {
+        console.log('Your BMI:', bmi, 'Obesity');
+    }
+
     console.log('You should descrease:', (weight - maxWeightOfNormalBMI).toFixed(1), 'kg. Max weight to get normal BMI is', maxWeightOfNormalBMI);
 }
 
