@@ -5,7 +5,7 @@ const MAX_BMI_OVERWEIGHT = 29.9;
 const MIN_BMI_OBESITY = 30;
 
 let weight = 90;
-let height = 1.5;
+let height = 1.59;
 let bmi = (weight / (height * 2)).toFixed(1);
 
 let minWeightToMeetNormalBMI = (MIN_BMI_NORMALWEIGHT * (height * 2)).toFixed(1);
@@ -27,4 +27,5 @@ else {
 
     console.log('You should descrease:', (weight - maxWeightOfNormalBMI).toFixed(1), 'kg. Max weight to get normal BMI is', maxWeightOfNormalBMI);
 }
+
 
