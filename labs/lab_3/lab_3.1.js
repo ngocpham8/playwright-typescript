@@ -2,8 +2,8 @@
 
 
 let intArr = [1, 2, 3, 4, 5, 6, 8, 10, 11];
-let evenNumberCount = 0;
-let oddNumberCount = 0;
+// let evenNumberCount = 0;
+// let oddNumberCount = 0;
 
 // 1. Use for loop
 // for (let index = 0; index < intArr.length; index++) {
