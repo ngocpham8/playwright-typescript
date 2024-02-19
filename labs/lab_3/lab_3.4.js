@@ -40,3 +40,34 @@ while (intArr1.length > 0) {
 }
 
 console.log('Sorted array:', intArr2);
+
+// Solution 3: 
+let foo = [1, 12, 16, 28, 34, 105, 108, 120, 125]
+let bar = [1, 2, 13, 16, 27, 99, 100, 103]
+
+let merged = []
+
+const fooLength = foo.length;
+const barLength = bar.length;
+
+let forPosition, barPosition, mergedPosition = 0;
+while (forPosition < fooLength && barPosition < barLength) {
+    if (foo[forPosition] < bar[barPosition]) {
+        merged[mergedPosition] = foo[forPosition];
+        forPosition++;
+        mergedPosition++
+    } else {
+        merged[mergedPosition] = bar[barPosition];
+        barPosition++;
+        mergedPosition++
+    }
+}
+
+while (forPosition < fooLength) {
+    merged[mergedPosition] = foo[forPosition];
+    mergedPosition++
+    forPosition;
+}
+while (barPosition < barLength) {
+    merged[mergedPosition++] = bar[barPosition++];
+}
