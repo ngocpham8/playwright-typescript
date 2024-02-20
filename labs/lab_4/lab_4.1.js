@@ -67,10 +67,13 @@ function findAccount(numberUserInput) {
 
 function updateBalance(accountUserInput, amountUserInput) {
     const userAccount = findAccount(accountUserInput);
+    const amountToWithdraw = Number(amountUserInput);
     if (userAccount != null) {
-        if (amountUserInput <= userAccount.balance) {
-            userAccount.balance = userAccount.balance - Number(amountUserInput);
-            console.log('Withdraw successfully: ', amountUserInput, ' .Your balance now is :', userAccount.balance)
+        if (amountToWithdraw < 0) {
+            console.log('Money can not be negative number')
+        } else if (0 < amountToWithdraw && amountToWithdraw <= userAccount.balance) {
+            userAccount.balance = userAccount.balance - amountToWithdraw;
+            console.log('Withdraw successfully: ', amountToWithdraw, ' .Your balance now is :', userAccount.balance)
         }
         else {
             console.log('Not enough balance to withdraw')
