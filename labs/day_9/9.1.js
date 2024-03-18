@@ -24,7 +24,7 @@ function printTargetPosts(userId, postId) {
             })
 
             if (foundedPost) {
-                console.log(foundedPost);
+                console.log(`Post content: ${foundedPost[0].body}`);
             } else {
                 console.log(`Not found any postId: ${postId} of user ${userId}`);
             }

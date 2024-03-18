@@ -18,7 +18,8 @@ async function lab11() {
 
     // print target post of user
     const post = await requestHandler.getTargetPost(url, userId, postId);
-    console.log(post);
+    const postContent = await post.body;
+    console.log('Post content:', postContent);
     // print all posts of user
     const allPost = await requestHandler.getAllPostsOfUser(url, userId);
     console.log(allPost);
