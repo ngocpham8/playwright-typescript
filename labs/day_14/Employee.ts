@@ -1,6 +1,6 @@
 export default class Employee {
     protected name: string;
-    protected salary: number;
+    protected salary: number = 0;
 
     constructor(name: string) {
         this.name = name;
