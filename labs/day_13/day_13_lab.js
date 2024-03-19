@@ -7,9 +7,8 @@ const Racing = require('./Racing');
 const horse = new Horse('horse');
 const tiger = new Tiger('tiger');
 const dog = new Dog('dog');
-
+console.log(horse, tiger, dog);
 // Usage of controller
-Racing.run([horse, tiger, dog]);
 Racing.getWinner([horse, tiger, dog]);
 
 

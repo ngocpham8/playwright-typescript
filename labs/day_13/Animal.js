@@ -1,12 +1,19 @@
 class Animal {
-    constructor(name) {
+    constructor(name, speed) {
         this.name = name;
+        this.speed = speed;
     }
 
-    getSpeed(maxSpeed) {
-        const randomNumber = Math.floor(Math.random() * maxSpeed) + 1;
-        this.speed = randomNumber;
-        return randomNumber;
+    static generateSpeed(maxSpeed) {
+        return Math.floor(Math.random() * maxSpeed) + 1;
+    }
+
+    getSpeed() {
+        return this.speed;
+    }
+
+    getName() {
+        return this.name;
     }
 }
 module.exports = Animal;

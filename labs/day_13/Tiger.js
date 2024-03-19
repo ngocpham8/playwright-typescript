@@ -1,8 +1,9 @@
 const Animal = require('./Animal');
 
 class Tiger extends Animal {
-    getSpeed() {
-        return super.getSpeed(100);
+    constructor(name) {
+        super(name);
+        this.speed =  Animal.generateSpeed(100);
     }
 }
 
