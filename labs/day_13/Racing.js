@@ -1,5 +1,3 @@
-const Animal = require('./Animal');
-
 class Racing {
     static run(animalList) {
         animalList.forEach(animal => {
