@@ -2,8 +2,8 @@ import BankingAccount from "./BankingAccount";
 
 export default class CheckingAccount extends BankingAccount {
     private overdraftLimit: number = 50;
-    constructor(balance: number) {
-        super(balance);
+    constructor(accountId: string, balance: number) {
+        super(accountId, balance);
     }
 
     deposit(amount: number): void {
@@ -17,7 +17,8 @@ export default class CheckingAccount extends BankingAccount {
             this.balance -= amount;
         }
         else {
-            console.log(`ERROR: Can not withdraw. Should be left ${this.overdraftLimit}`);
+            console.log(`ERROR: Can not withdraw ${amount}. Current balance is: ${this.balance}.
+                            Should be left ${this.overdraftLimit}`);
         }
     }
 

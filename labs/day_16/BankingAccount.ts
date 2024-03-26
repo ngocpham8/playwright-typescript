@@ -1,8 +1,10 @@
 export default abstract class BankingAccount {
+    protected accountId: string = '';
     protected balance: number = 0;
 
-    constructor(balance: number) {
+    constructor(accountId: string, balance: number) {
         this.validateBalance(balance);
+        this.accountId = accountId;
         this.balance = balance;
     }
 

@@ -2,8 +2,8 @@ import BankingAccount from "./BankingAccount";
 
 export default class SavingsAccount extends BankingAccount {
     private minimumBalance: number = 0;
-    constructor(balance: number) {
-        super(balance);
+    constructor(accountId: string, balance: number) {
+        super(accountId, balance);
     }
 
     deposit(amount: number): void {
@@ -17,7 +17,8 @@ export default class SavingsAccount extends BankingAccount {
             this.balance -= amount;
         }
         else {
-            console.log(`ERROR: Can not withdraw. The minimum balance should be ${this.minimumBalance}`);
+            console.log(`ERROR: Can not withdraw ${amount}. Current balance is: ${this.balance}.
+                         Maximum account you can withdraw is ${this.balance - this.minimumBalance}.`);
         }
     }
 
